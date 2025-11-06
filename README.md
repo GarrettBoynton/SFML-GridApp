@@ -1,236 +1,1 @@
-Layered World Editor — 2D Foundation for Infinite Depth
-
-
-
-A 2D level editor built for speed, structure, and scale.
-
-Think old-school Doom meets modern worldbuilding — a grid-based design tool for creating rooms, walls, and points of interest with purpose.
-
-Every element you place already knows it belongs to something bigger.
-
-
-
-Core Concept
-
-
-
-This editor isn’t about pixels or props — it’s about layers of meaning.
-
-
-
-2D-first, 3D-ready: Everything you draw lives in 2D space, but is defined in a way that can expand into 3D later.
-
-
-
-Layer-based worldbuilding: Inspired by voxel logic — but without the bloat. Layers let you stack geometry, define materials, or simulate interactions, all while keeping the world clean and non-destructive.
-
-
-
-Instant blueprints: Sketch a level in minutes. Rooms, corridors, or whole compounds — each drawn as simple geometry that can later evolve into complex environments.
-
-
-
-Features
-
-
-
-Draw on a grid canvas with points, lines, rectangles, and circular markers.
-
-
-
-Define rooms (3+ walls), walls, and points of interest as modular, editable entities.
-
-
-
-Layer system for handling geometry, objects, and interactive logic separately — like stacked sheets of intent.
-
-
-
-Export and edit geometry data for external engines or rendering tools.
-
-
-
-Built for speed and iteration, not just precision.
-
-
-
-Why It Exists
-
-
-
-This isn’t just a map painter.
-
-It’s the foundation for a true spatial editor — one that understands the geometry it creates.
-
-
-
-The goal is to eventually support:
-
-
-
-Pre-calculation of rooms for mesh culling and optimization.
-
-
-
-Acoustic modeling, so each room sounds right.
-
-
-
-Procedural terrain generation for exterior spaces.
-
-
-
-Scattering systems for vegetation, props, and micro-detail.
-
-
-
-A 3D expansion, once the 2D foundation is rock solid.
-
-
-
-Right now, it’s simple by design.
-
-But every line of code points toward a world you can eventually walk through — and feel.
-
-
-
-How We Think It Should Work
-
-
-
-The system starts simple — a grid, a few primitives — but underneath, it’s built like a simulation waiting to wake up.
-
-
-
-1\. Rooms as First-Class Citizens
-
-
-
-Each room is more than lines.
-
-It’s a container of meaning — defined by its walls, containing points of interest, existing on one or more layers.
-
-A triangle is a room. A hall is a room. A massive open plain? Still a room, just one that forgot its ceiling.
-
-
-
-Rooms hold metadata: acoustics, lighting presets, object spawns, and physics boundaries.
-
-Eventually, rooms will talk to each other — defining adjacency for pathfinding and sound travel.
-
-
-
-2\. Walls as Connective Logic
-
-
-
-Walls aren’t just geometry — they’re rules.
-
-Each wall knows what rooms it belongs to, what layer it’s on, and whether it’s solid, transparent, or decorative.
-
-In 2D, they define structure.
-
-In 3D, they’ll define collision, sound reflection, and visual occlusion.
-
-
-
-Think of them as data-bound edges between spaces.
-
-
-
-3\. Layers as Dimensions of Thought
-
-
-
-Layers are where it gets interesting.
-
-They aren’t “render layers” — they’re conceptual.
-
-A layer could hold geometry. Another could hold objects. Another could hold light sources or triggers.
-
-
-
-Everything you place belongs to a layer, but layers can overlap without conflict.
-
-That means non-destructive editing — worlds you can rearrange without tearing the fabric underneath.
-
-Like voxels, but abstracted — data only exists where meaning does.
-
-
-
-4\. Points of Interest
-
-
-
-These are the anchors of interaction.
-
-Spawn points, triggers, items, sound emitters — all defined as “interest nodes.”
-
-They live inside rooms or on walls and carry type metadata, so the engine knows what to do with them later.
-
-
-
-5\. Future State: Spatial Intelligence
-
-
-
-Once the core is solid, the editor should understand the spaces it builds.
-
-That means:
-
-
-
-Pre-calculating visibility for culling.
-
-
-
-Estimating acoustic zones.
-
-
-
-Generating traversal data.
-
-
-
-Maybe even simulating how light or sound behaves in that space.
-
-
-
-The goal: when you hit “export,” you’re not just getting a level.
-
-You’re getting a world model ready to think, hear, and move.
-
-
-
-6\. Guiding Principle
-
-
-
-Build fast. Edit fearlessly.
-
-Let structure emerge from freedom, not the other way around.
-
-This editor isn’t about precision — it’s about intuition that leads to precision.
-
-
-
-Current Status
-
-
-
-🚧 Prototype Phase.
-
-Functional grid editing, point and shape creation, and export support.
-
-Layer system in conceptual stage — currently being designed for maximum flexibility and minimal overhead.
-
-
-
-Vision
-
-
-
-Build worlds the way classic devs did — with constraints that spark creativity, not kill it.
-
-Start with a grid. End with an experience.
-
+\# Layered World Editor — 2D Foundation for Infinite DepthA 2D level editor built for speed, structure, and scale.  Think \*old-school Doom\* meets modern worldbuilding — a grid-based design tool for creating rooms, walls, and points of interest with purpose.  Every element you place already knows it belongs to something bigger.---\## 🧠 Core ConceptThis editor isn’t about pixels or props — it’s about \*\*layers of meaning\*\*.\- \*\*2D-first, 3D-ready:\*\* Everything you draw lives in 2D space, but is defined in a way that can expand into 3D later.  \- \*\*Layer-based worldbuilding:\*\* Inspired by voxel logic — but without the bloat. Layers let you stack geometry, define materials, or simulate interactions, all while keeping the world clean and non-destructive.  \- \*\*Instant blueprints:\*\* Sketch a level in minutes. Rooms, corridors, or whole compounds — each drawn as simple geometry that can later evolve into complex environments.---\## ✏️ Features\- Draw on a \*\*grid canvas\*\* with points, lines, rectangles, and circular markers.  \- Define \*\*rooms\*\* (3+ walls), \*\*walls\*\*, and \*\*points of interest\*\* as modular, editable entities.  \- \*\*Layer system\*\* for handling geometry, objects, and interactive logic separately — like stacked sheets of intent.  \- \*\*Export and edit\*\* geometry data for external engines or rendering tools.  \- Built for \*\*speed\*\* and \*\*iteration\*\*, not just precision.---\## 🎯 Why It ExistsThis isn’t just a map painter.  It’s the foundation for a \*true spatial editor\* — one that understands the geometry it creates.The goal is to eventually support:\- \*\*Pre-calculation of rooms\*\* for mesh culling and optimization.  \- \*\*Acoustic modeling\*\*, so each room \*sounds\* right.  \- \*\*Procedural terrain generation\*\* for exterior spaces.  \- \*\*Scattering systems\*\* for vegetation, props, and micro-detail.  \- \*\*A 3D expansion\*\*, once the 2D foundation is rock solid.Right now, it’s simple by design.  But every line of code points toward a world you can eventually walk through — and \*feel\*.---\## ⚙️ How We Think It Should WorkThe system starts simple — a grid, a few primitives — but underneath, it’s built like a simulation waiting to wake up.\### 1. Rooms as First-Class CitizensEach room is more than lines.  It’s a \*container of meaning\* — defined by its walls, containing points of interest, existing on one or more layers.  A triangle is a room. A hall is a room. A massive open plain? Still a room, just one that forgot its ceiling.  Rooms hold metadata: acoustics, lighting presets, object spawns, and physics boundaries.  Eventually, rooms will talk to each other — defining adjacency for pathfinding and sound travel.---\### 2. Walls as Connective LogicWalls aren’t just geometry — they’re rules.  Each wall knows what rooms it belongs to, what layer it’s on, and whether it’s solid, transparent, or decorative.  In 2D, they define structure.  In 3D, they’ll define collision, sound reflection, and visual occlusion.  Think of them as data-bound edges between spaces.---\### 3. Layers as Dimensions of ThoughtLayers are where it gets interesting.  They aren’t “render layers” — they’re \*conceptual\*.  A layer could hold geometry. Another could hold objects. Another could hold light sources or triggers.  Everything you place belongs to a layer, but layers can overlap without conflict.  That means \*\*non-destructive editing\*\* — worlds you can rearrange without tearing the fabric underneath.  Like voxels, but abstracted — data only exists where meaning does.---\### 4. Points of InterestThese are the anchors of interaction.  Spawn points, triggers, items, sound emitters — all defined as “interest nodes.”  They live inside rooms or on walls and carry type metadata, so the engine knows what to do with them later.---\### 5. Future State: Spatial IntelligenceOnce the core is solid, the editor should \*understand\* the spaces it builds.  That means:\- Pre-calculating visibility for culling  \- Estimating acoustic zones  \- Generating traversal data  \- Simulating how light or sound behaves in that space  The goal: when you hit \*\*Export\*\*, you’re not just getting a level —  you’re getting a \*world model\* ready to think, hear, and move.---\### 6. Guiding PrincipleBuild fast. Edit fearlessly.  Let structure emerge from freedom, not the other way around.  This editor isn’t about precision — it’s about intuition that \*leads\* to precision.---\## 🚧 Current Status\*\*Prototype Phase\*\*  \- Functional grid editing  \- Point and shape creation  \- Export support  \- Layer system in conceptual design (in progress)Expect rough edges — this thing’s alive and evolving.---\## 🌍 VisionBuild worlds the way \*classic devs\* did —  with constraints that spark creativity, not kill it.  Start with a grid.  End with an experience.---
