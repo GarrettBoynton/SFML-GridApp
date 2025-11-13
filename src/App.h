@@ -3,6 +3,9 @@
 
 #include <SFML/Graphics.hpp>
 
+#include "Grid.h"
+#include "GridView.h"
+
 class App
 {
 public:
@@ -15,6 +18,8 @@ private:
     void render();
 
     sf::RenderWindow window;
+    Grid grid;
+    GridView gridView;
 };
 
 #endif // APP_H
